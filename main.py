@@ -71,12 +71,12 @@ class Saver:
 
 
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument('-d', '--directory', required=False)
-    # parser.add_argument('-r', '--rows', required=False)
-    # parser.add_argument('-c', '--chorus', required=False)
-    # args = vars(parser.parse_args())
-    args = {'directory': r'C:\stp\stp2021', 'rows': '30', 'chorus': '5'}
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-d', '--directory', required=False)
+    parser.add_argument('-r', '--rows', required=False)
+    parser.add_argument('-c', '--chorus', required=False)
+    args = vars(parser.parse_args())
+    # args = {'directory': r'C:\stp\stp2021', 'rows': '30', 'chorus': '5'}
 
     if int(args['rows']) < int(args['chorus']) * 3:
         print('Your song is smaller than 3 choruses')
