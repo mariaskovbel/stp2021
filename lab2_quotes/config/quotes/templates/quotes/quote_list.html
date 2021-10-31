@@ -1,0 +1,8 @@
+<!-- books/templates/books/book_list.html -->
+<h1>All quotes</h1>
+{% for quote in object_list %}
+<span class="quote" itemprop="quote"> {{quote.quote}}</span>
+<br>
+<span> <small class="author" itemprop="author"> {{quote.author}} </small> </span>
+<br><br>
+{% endfor %}
